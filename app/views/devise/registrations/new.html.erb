@@ -9,6 +9,18 @@
   </div>
 
   <div class="field">
+    <%= f.text_field :name, placeholder: "Your Name" %>
+  </div>
+
+  <div class="field">
+    <%= f.text_field :username, placeholder: "Choose a @username" %>
+  </div>
+
+  <div class="field">
+    <%= f.text_field :location, placeholder: "Location" %>
+  </div>
+
+  <div class="field">
     <%= f.label :password %>
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>

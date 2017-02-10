@@ -1,15 +1,20 @@
 Rails.application.routes.draw do 
 
- 	
-  get 'comments' => 'comment#feed'
+	root 'links#index'
 
-  get 'views' => 'comment#view'
+	get 'about' => 'welcome#about'
 
+	get 'index' => 'welcome#index'
 
-  root 'welcome#index'
 
  
-devise_for :users
   
+
+	resources :links
+ 	devise_for :users
+  
+
+ 
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
