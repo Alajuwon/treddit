@@ -13,6 +13,6 @@
 //= require jquery  
 //= require jquery_ujs
 //= require turbolinks
-//= require boottsrap-sprockets
+//= require bootstrap-sprockets
 //= require timeago
 //= require_tree .

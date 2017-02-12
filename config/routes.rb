@@ -2,9 +2,6 @@ Rails.application.routes.draw do
 
 	root 'links#index'
 
-	get 'about' => 'welcome#about'
-
-	get 'index' => 'welcome#index'
 
 	post 'index' => 'links#index'
 

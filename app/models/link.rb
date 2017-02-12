@@ -9,7 +9,7 @@ class Link < ApplicationRecord
 	validates :post, presence: true
 
 
-	def links
-		if link.include?("http://") || link.include?("https://")
-	end
+	#def links
+	#	if link.include?("http://") || link.include?("https://")
+	#end
 end
