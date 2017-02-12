@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
 	get 'index' => 'welcome#index'
 
+	post 'index' => 'links#index'
+
 
  
   
