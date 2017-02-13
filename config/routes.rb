@@ -1,9 +1,9 @@
 Rails.application.routes.draw do 
 
-	root 'links#index'
+	root 'welcome#index'
 
 
-	post 'index' => 'links#index'
+	post 'links' => 'links#index'
 
 
  

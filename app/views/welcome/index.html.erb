@@ -1,2 +1,30 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<div class="row">
+    <div class="col-md-6 col-md-offset-2">
+        <h1>Welcome to Party Links <%= current_user.username %></h1>
+        <p> Where <strong>LINKS</strong> gets <strong>JUDGED</strong></p>
+    </div>
+  </div>
+  
+<br>
+
+<div>
+	<% @links.each do |link| %>
+	<div>
+		<p>@<%= link.user.username %></p>
+		<p>@<%= link.post.html_safe %></p>
+	</div>
+	<% end %>
+</div>
+
+<br>
+
+
+
+
+
+
+
+
+<%= link_to new_link_path do %>
+<span class= "glyphicon glyphicon-plus"></span> New Link
+<% end %>

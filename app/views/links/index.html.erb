@@ -1,23 +1,16 @@
 <p id="notice"><%= notice %></p>
-
-
-  <div class="row">
-    <div class="col-md-6 col-md-offset-4">
-        <h1>Welcome to Reddit <%= current_user.username %></h1>
-        <p> Where <strong>LINKS</strong> gets <strong>JUDGED</strong></p>
-    </div>
-  </div>
-
+    
+    <h1><strong>Links</strong></h1>
 
     <div class="row">
-      <div class="col-md-8">
+      <div class="col-md-8 col-md-offset-1">
         <% @links.each do |link| %>
-              <%= link_to link.user.name %><span class="blue-text"><%= link_to"@#{link.user.username}" %> &#8227; <%= time_ago_in_words(link.created_at) %></span>
+              <%= link_to link.user.name, show_link_path(id: link.user_id) %><span class="blue-text"><%= link_to"@#{link.user.username}" %> &#8227; <%= time_ago_in_words(link.created_at) %></span>
             </div>
           </div>
           
               <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-8">
                   <%= link_to 'Edit', edit_link_path(link) %> | <%= link_to 'Destroy', link, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         <% end %>
       </div>
@@ -25,4 +18,8 @@
 
 <br>
 
-<%= link_to 'New Link', new_link_path %>
+<%= link_to new_link_path do %>
+<span class= "glyphicon glyphicon-plus"></span> New Link
+<% end %>
+
+
